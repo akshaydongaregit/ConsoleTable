@@ -21,10 +21,15 @@ public class TTable<T> {
 	}
 	public TTable<T> addColumn(TColumn col)
 	{
-		this.colList.add(col);
-		
+		this.colList.add(col);		
 		return this;
 	}
+	public TTable<T> addColumn(String header, String property, int width)
+	{
+		this.colList.add(new TColumn(header, property, width));		
+		return this;
+	}
+	
 	public void printHeader()
 	{
 		
